@@ -6,8 +6,8 @@ This repository contains **JavaScript practice exercises** focusing on arrays, l
 
 ## Table of Contents
 
-1. [Discount Table](#discount-table)  
-2. [Product Cards](#product-cards)  
+1. [Product Cards](#product-cards)
+2. [Discount Table](#discount-table) 
 3. [Order Summary Table](#order-summary-table)  
 4. [Show Only Products with Stock](#show-only-products-with-stock)  
 5. [Countdown Display](#countdown-display)  
