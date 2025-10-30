@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart Simulation</title>
+</head>
+<body>
+
+<h2>Cart Items</h2>
+
+<ul id="cartList">
+    <!-- Cart items will appear here -->
+</ul>
+
+<script>
+    let cart = [];
+    let i = 0;
+    let cartList = document.getElementById("cartList");
+
+    while (i < 5) {
+        let item = prompt("Enter item " + (i + 1) + " to add to cart:");
+        if (item) {
+            cart.push(item);
+            i++;
+        }
+    }
+
+    // Display the cart items
+    cart.forEach((item, index) => {
+        let listItem = `<li>${index + 1}. ${item}</li>`;
+        cartList.innerHTML += listItem;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock-Based Product List</title>
+</head>
+<body>
+
+<h2>Products in Stock</h2>
+
+<ul id="productList">
+    <!-- Products will be displayed here -->
+</ul>
+
+<script>
+    let products = [
+        { name: "Keyboard", stock: 3 },
+        { name: "Mouse", stock: 2 },
+        { name: "Charger", stock: 0 },
+        { name: "Monitor", stock: 5 }
+    ];
+
+    let i = 0;
+    let list = document.getElementById("productList");
+
+    while (i < products.length && products[i].stock > 0) {
+        let listItem = `<li>${products[i].name} (Stock: ${products[i].stock})</li>`;
+        list.innerHTML += listItem;
+        i++;
+    }
+</script>
+
+</body>
+</html>

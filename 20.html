@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator Table</title>
+</head>
+<body>
+
+<h2>Tax Calculator (18% GST)</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Product</th>
+            <th>Price (₹)</th>
+            <th>GST (₹)</th>
+            <th>Final Price (₹)</th>
+        </tr>
+    </thead>
+    <tbody id="taxTableBody">
+        <!-- Table rows will be added by JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    let products = [
+        { name: "Shirt", price: 500 },
+        { name: "Laptop", price: 40000 },
+        { name: "Watch", price: 1200 }
+    ];
+
+    let tbody = document.getElementById("taxTableBody");
+
+    products.forEach((product, index) => {
+        let gst = product.price * 0.18; // 18% GST
+        let finalPrice = product.price + gst;
+
+        let row = `<tr>
+                        <td>${index + 1}</td>
+                        <td>${product.name}</td>
+                        <td>${product.price.toFixed(2)}</td>
+                        <td>${gst.toFixed(2)}</td>
+                        <td>${finalPrice.toFixed(2)}</td>
+                   </tr>`;
+        tbody.innerHTML += row;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Table</title>
+</head>
+<body>
+
+<h2>Inventory Table</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Product Name</th>
+            <th>Price (₹)</th>
+            <th>Quantity</th>
+            <th>Total Value (₹)</th>
+        </tr>
+    </thead>
+    <tbody id="inventoryTableBody">
+        <!-- Rows will be added by JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    let inventory = [
+        { name: "Keyboard", price: 500, quantity: 3 },
+        { name: "Mouse", price: 299, quantity: 5 },
+        { name: "Monitor", price: 1500, quantity: 2 }
+    ];
+
+    let tbody = document.getElementById("inventoryTableBody");
+
+    inventory.forEach((item, index) => {
+        let totalValue = item.price * item.quantity;
+        let row = `<tr>
+                        <td>${index + 1}</td>
+                        <td>${item.name}</td>
+                        <td>${item.price}</td>
+                        <td>${item.quantity}</td>
+                        <td>${totalValue}</td>
+                   </tr>`;
+        tbody.innerHTML += row;
+    });
+</script>
+
+</body>
+</html>

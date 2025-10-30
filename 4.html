@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Summary</title>
+</head>
+<body>
+
+<h2>Order Summary Table</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody id="orderTableBody">
+        <!-- Table rows will be added here by JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    // Array of order items
+    let orderItems = [
+        { name: "Shirt", quantity: 2, price: 500 },
+        { name: "Watch", quantity: 1, price: 1200 },
+        { name: "Shoes", quantity: 1, price: 1500 }
+    ];
+
+    let tbody = document.getElementById("orderTableBody");
+
+    // Loop through order items and create table rows
+    orderItems.forEach((item, index) => {
+        let total = item.quantity * item.price;
+        let row = `<tr>
+                        <td>${index + 1}</td>
+                        <td>${item.name}</td>
+                        <td>${item.quantity}</td>
+                        <td>${item.price}</td>
+                        <td>${total}</td>
+                   </tr>`;
+        tbody.innerHTML += row;
+    });
+</script>
+
+</body>
+</html>

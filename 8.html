@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Total</title>
+</head>
+<body>
+
+<h2>Cart Total</h2>
+
+<div id="totalAmount"></div>
+
+<script>
+    let cart = [499, 299, 1299, 999];
+    let total = 0;
+    let i = 0;
+
+    while (i < cart.length) {
+        total += cart[i]; // Add each item price to total
+        i++;
+    }
+
+    document.getElementById("totalAmount").innerHTML = "Total Amount: ₹" + total;
+</script>
+
+</body>
+</html>

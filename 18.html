@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Budget Comparison</title>
+</head>
+<body>
+
+<h2>Cart Budget Check</h2>
+
+<div id="cartStatus"></div>
+
+<script>
+    let cart = [499, 1299, 999, 1200]; // Cart prices
+    let budget = 5000; // User-defined budget
+    let total = 0;
+
+    // Loop to calculate total cart amount
+    for (let i = 0; i < cart.length; i++) {
+        total += cart[i];
+    }
+
+    let statusDiv = document.getElementById("cartStatus");
+
+    // Compare total with budget
+    if (total <= budget) {
+        statusDiv.innerHTML = `Cart Total: ₹${total} - Within Budget`;
+    } else {
+        statusDiv.innerHTML = `Cart Total: ₹${total} - Budget Exceeded`;
+    }
+</script>
+
+</body>
+</html>

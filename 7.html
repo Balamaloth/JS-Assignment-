@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Item Until Match</title>
+</head>
+<body>
+
+<h2>Product Search</h2>
+
+<div id="output"></div>
+
+<script>
+    let products = ["Laptop", "Keyboard", "Mouse", "Camera", "Charger", "Watch"];
+    let outputDiv = document.getElementById("output");
+
+    for (let i = 0; i < products.length; i++) {
+        outputDiv.innerHTML += products[i] + "<br>";
+        if (products[i] === "Camera") {
+            outputDiv.innerHTML += "<b>'Camera' found! Stopping loop.</b>";
+            break; // Stop the loop once "Camera" is found
+        }
+    }
+</script>
+
+</body>
+</html>

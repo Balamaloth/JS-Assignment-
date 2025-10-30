@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist Items</title>
+</head>
+<body>
+
+<h2>My Wishlist</h2>
+
+<ul id="wishlist">
+    <!-- Wishlist items will appear here -->
+</ul>
+
+<script>
+    let wishlist = ["Laptop", "Camera", "Smartphone", "Headphones"];
+    let i = 0;
+    let wishlistDiv = document.getElementById("wishlist");
+
+    do {
+        let listItem = `<li>${wishlist[i]}</li>`;
+        wishlistDiv.innerHTML += listItem;
+        i++;
+    } while (i < wishlist.length);
+</script>
+
+</body>
+</html>

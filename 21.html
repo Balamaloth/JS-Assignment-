@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products in Reverse Order</title>
+</head>
+<body>
+
+<h2>Products in Reverse Order</h2>
+
+<ul id="productList">
+    <!-- Products will be displayed here -->
+</ul>
+
+<script>
+    let products = ["Shirt", "Laptop", "Watch", "Shoes", "Headphones"];
+    let list = document.getElementById("productList");
+
+    // Loop through array from last to first
+    for (let i = products.length - 1; i >= 0; i--) {
+        list.innerHTML += `<li>${products[i]}</li>`;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Sale Display</title>
+</head>
+<body>
+
+<h2>Flash Sale Prices (20% Off)</h2>
+
+<ul id="discountedList">
+    <!-- Discounted prices will appear here -->
+</ul>
+
+<script>
+    let products = [
+        { name: "Shirt", price: 500 },
+        { name: "Watch", price: 1200 },
+        { name: "Shoes", price: 1500 }
+    ];
+
+    let i = 0;
+    let discountedList = document.getElementById("discountedList");
+
+    do {
+        let discountedPrice = products[i].price * 0.8; // 20% discount
+        let listItem = `<li>${products[i].name}: ₹${discountedPrice.toFixed(2)}</li>`;
+        discountedList.innerHTML += listItem;
+        i++;
+    } while (i < products.length);
+</script>
+
+</body>
+</html>

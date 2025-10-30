@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products by Type</title>
+</head>
+<body>
+
+<h2>Products by Type</h2>
+
+<div id="clothingDiv">
+    <h3>Clothing</h3>
+    <ul id="clothingList"></ul>
+</div>
+
+<div id="electronicsDiv">
+    <h3>Electronics</h3>
+    <ul id="electronicsList"></ul>
+</div>
+
+<div id="accessoriesDiv">
+    <h3>Accessories</h3>
+    <ul id="accessoriesList"></ul>
+</div>
+
+<script>
+    let products = [
+        { name: "Shirt", type: "Clothing" },
+        { name: "Laptop", type: "Electronics" },
+        { name: "Watch", type: "Accessories" },
+        { name: "T-Shirt", type: "Clothing" },
+        { name: "Headphones", type: "Electronics" }
+    ];
+
+    products.forEach(product => {
+        if (product.type === "Clothing") {
+            document.getElementById("clothingList").innerHTML += `<li>${product.name}</li>`;
+        } else if (product.type === "Electronics") {
+            document.getElementById("electronicsList").innerHTML += `<li>${product.name}</li>`;
+        } else if (product.type === "Accessories") {
+            document.getElementById("accessoriesList").innerHTML += `<li>${product.name}</li>`;
+        }
+    });
+</script>
+
+</body>
+</html>

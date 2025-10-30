@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Status</title>
+</head>
+<body>
+
+<h2>Cart Status</h2>
+
+<div id="cartStatus"></div>
+
+<script>
+    let cart = []; // Empty cart
+    let i = 0;
+    let statusDiv = document.getElementById("cartStatus");
+
+    do {
+        if (cart.length === 0) {
+            statusDiv.innerHTML = "Cart is empty";
+        } else {
+            statusDiv.innerHTML = "Cart has " + cart.length + " items";
+        }
+        i++;
+    } while (cart.length > 0 && i < 1); // Loop runs at least once
+</script>
+
+</body>
+</html>
