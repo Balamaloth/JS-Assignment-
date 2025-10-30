@@ -96,4 +96,4 @@ This repository contains **JavaScript practice exercises** focusing on arrays, l
 ## How to Use
 1. Clone this repository:  
 ```bash
-git clone <repository-url>
+git clone <https://github.com/Balamaloth/JS-Assignment-.git>
